@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Vice City Radio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="radio-card" aria-label="Vice City Radio player">
+      <div class="brand">VICE CITY RADIO</div>
+
+      <div class="station-art" id="stationArt" aria-hidden="true">VC</div>
+      <h1 id="stationName">Wildstyle Pirate Radio</h1>
+
+      <div class="controls">
+        <button id="prevBtn" class="control" type="button" aria-label="Previous station">⏮</button>
+        <button id="playBtn" class="play" type="button" aria-label="Play">▶</button>
+        <button id="nextBtn" class="control" type="button" aria-label="Next station">⏭</button>
+      </div>
+
+      <div class="volume-row">
+        <button id="muteBtn" class="small-control" type="button" aria-label="Mute">🔊</button>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+      </div>
+
+      <p id="status" class="status">Select a station to start</p>
+
+      <nav id="stations" class="stations" aria-label="Radio stations"></nav>
+    </section>
+  </main>
+
+  <audio id="audio" preload="none"></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
